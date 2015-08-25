@@ -3,11 +3,28 @@
   "private": true,
   "dependencies": {
     "bootstrap": "*",
-    "bootstrap-touch-carousel": "0.8.0",
+    "bootstrap-touch-carousel": "*",
     "bootstrap-table": "*",
-    "hammer.js": "2.0.4",
+    "bootstrap-slider": "*",
+    "bootstrap-wysihtml5": "*",
+    "bootstrap-datepicker": "*",
+    "bootstrap-timepicker": "*",
+    "chartjs": "*",
+    "colorpicker": "*",
+    "flot": "*",
+    "iCheck": "*",
+    "daterangepicker": "*",
+    "fullcalendar": "*",
+    "jquery.inputmask": "*",
+    "ckeditor": "*",
+    "hammer.js": "*",
     "jquery": "*",
-    "jquery-validation": "1.11.1",
-    "jquery-validation-unobtrusive": "3.2.2"
+    "jqueri-ui": "*",
+    "font-awesome": "*",
+    "jquery-validation": "*",
+    "jquery-validation-unobtrusive": "*"
+  },
+  "resolutions": {
+    "jquery": ">=1.5"
   }
 }

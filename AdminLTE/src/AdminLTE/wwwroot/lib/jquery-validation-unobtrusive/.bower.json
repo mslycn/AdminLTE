@@ -34,6 +34,6 @@
     "commit": "7759a89342dfd90c8a653f08dde40ccc683accfa"
   },
   "_source": "git://github.com/aspnet/jquery-validation-unobtrusive.git",
-  "_target": "3.2.2",
+  "_target": "*",
   "_originalSource": "jquery-validation-unobtrusive"
 }
