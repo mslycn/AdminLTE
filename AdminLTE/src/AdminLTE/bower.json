@@ -11,6 +11,7 @@
     "bootstrap-timepicker": "*",
     "chartjs": "*",
     "colorpicker": "*",
+    "react": "*",
     "flot": "*",
     "iCheck": "*",
     "daterangepicker": "*",
