@@ -111,7 +111,7 @@ namespace AdminLTE
             }
 
             // Add static files to the request pipeline.
-            app.UseStaticFiles();
+            app.UseStaticFiles(); 
 
             // Add cookie-based authentication to the request pipeline.
             app.UseIdentity();
