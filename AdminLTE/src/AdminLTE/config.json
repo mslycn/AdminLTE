@@ -1,0 +1,10 @@
+{
+  "AppSettings": {
+    "SiteTitle": "AdminLTE"
+  },
+  "Data": {
+    "DefaultConnection": {
+      "ConnectionString": "Server=(localdb)\\mssqllocaldb;Database=aspnet5-AdminLTE-521c489e-87b4-405a-89ae-c6c6cce90cd8;Trusted_Connection=True;MultipleActiveResultSets=true"
+    }
+  }
+}
