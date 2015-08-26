@@ -3,12 +3,14 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>@ViewData["Title"] - AdminLTE</title>
-
+        <title>AdminLTE 2 | @ViewData["Title"]</title>
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <environment names="Development">
             <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-            <link rel="stylesheet" href="~/lib/bootstrap-touch-carousel/dist/css/bootstrap-touch-carousel.css" />
-            <link rel="stylesheet" href="~/css/site.css" />
+            <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.css" />
+            <link rel="stylesheet" href="~/lib/ionicons/css/ionicons.css" />
+            <link rel="stylesheet" href="~/dist/css/AdminLTE.css" />
+            <link rel="stylesheet" href="~/lib/iCheck/skins/square/blue.css" />
         </environment>
         <environment names="Staging,Production">
             <link rel="stylesheet" href="//ajax.aspnetcdn.com/ajax/bootstrap/3.0.0/css/bootstrap.min.css"
@@ -20,40 +22,23 @@
             <link rel="stylesheet" href="~/css/site.css" asp-file-version="true" />
         </environment>
     </head>
-    <body>
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a asp-controller="Home" asp-action="Index" class="navbar-brand">AdminLTE</a>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a asp-controller="Home" asp-action="Index">Home</a></li>
-                        <li><a asp-controller="Home" asp-action="About">About</a></li>
-                        <li><a asp-controller="Home" asp-action="Contact">Contact</a></li>
-                    </ul>
-                    @await Html.PartialAsync("_LoginPartial")
-                </div>
-            </div>
-        </div>
-        <div class="container body-content">
+    <body class="hold-transition login-page">
+            @*@await Html.PartialAsync("_LoginPartial")*@
             @RenderBody()
-            <hr />
-            <footer>
-                <p>&copy; 2015 - AdminLTE</p>
-            </footer>
-        </div>
 
         <environment names="Development">
             <script src="~/lib/jquery/dist/jquery.js"></script>
             <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-            <script src="~/lib/hammer.js/hammer.js"></script>
-            <script src="~/lib/bootstrap-touch-carousel/dist/js/bootstrap-touch-carousel.js"></script>
+            <script src="~/lib/iCheck/icheck.js"></script>
+            <script>
+              $(function () {
+                $('input').iCheck({
+                  checkboxClass: 'icheckbox_square-blue',
+                  radioClass: 'iradio_square-blue',
+                  increaseArea: '20%' // optional
+                });
+              });
+            </script>
         </environment>
         <environment names="Staging,Production">
             <script src="//ajax.aspnetcdn.com/ajax/jquery/jquery-2.1.4.min.js"
@@ -76,5 +61,6 @@
         </environment>
 
         @RenderSection("scripts", required: false)
+
     </body>
 </html>
