@@ -12,6 +12,7 @@
     "chartjs": "*",
     "colorpicker": "*",
     "react": "*",
+    "react-router": "*",
     "flot": "*",
     "fastclick": "*",
     "iCheck": "*",
