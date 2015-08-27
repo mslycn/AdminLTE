@@ -5,7 +5,6 @@
     },
     render: function () {
         return (
-
                 <div className="box">
                     <div className="box-header with-border">
                         <h3 className="box-title">{this.state.title}</h3>

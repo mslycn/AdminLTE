@@ -20,6 +20,8 @@
         <link rel="stylesheet" href="~/dist/css/skins/_all-skins.min.css">
     </environment>
     <script type="text/jsx" src="@Url.Content("~/dist/js/components/ui/Box.jsx")"></script>
+    <script type="text/jsx" src="@Url.Content("~/dist/js/components/ui/PageHeader.jsx")"></script>
+    <script type="text/jsx" src="@Url.Content("~/dist/js/components/ui/Breadcrumb.jsx")"></script>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
     <!-- Site wrapper -->
@@ -339,17 +341,10 @@
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->
-            <section class="content-header">
-                <h1>
-                    Blank page
-                    <small>it all starts here</small>
-                </h1>
-                <ol class="breadcrumb">
-                    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                    <li><a href="#">Examples</a></li>
-                    <li class="active">Blank page</li>
-                </ol>
-            </section>
+            <div id="page-header"></div>
+            <script type="text/jsx">
+                React.render(<PageHeader title="@ViewData["Title"]" description="@ViewData["Description"]" />, document.getElementById('page-header'));
+            </script>
             <!-- Main content -->
             <section class="content">
                 @RenderBody()
