@@ -21,6 +21,7 @@
               asp-fallback-test-class="carousel-caption" asp-fallback-test-property="display" asp-fallback-test-value="none" />
         <link rel="stylesheet" href="~/css/site.css" asp-file-version="true" />*@
     </environment>
+    <script type="text/jsx" src="@Url.Content("~/dist/js/components/ui/Box.jsx")"></script>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
     <!-- Site wrapper -->
@@ -298,7 +299,7 @@
                             <li><a href="profile.html"><i class="fa fa-circle-o"></i> Profile</a></li>
                             <li><a href="login.html"><i class="fa fa-circle-o"></i> Login</a></li>
                             <li><a href="register.html"><i class="fa fa-circle-o"></i> Register</a></li>
-                            <li><a href="lockscreen.html"><i class="fa fa-circle-o"></i> Lockscreen</a></li>
+                            <li><a href="lockscreen.html"><i class="fa fa-circle-o"></i> Lock screen</a></li>
                             <li><a href="404.html"><i class="fa fa-circle-o"></i> 404 Error</a></li>
                             <li><a href="500.html"><i class="fa fa-circle-o"></i> 500 Error</a></li>
                             <li class="active"><a href="blank.html"><i class="fa fa-circle-o"></i> Blank Page</a></li>
@@ -530,7 +531,6 @@
             <script src="~/lib/react-router/build/umd/reactrouter.js"></script>
             <script src="~/dist/js/app.min.js"></script>
             <script src="~/dist/js/demo.js"></script>
-            <script src="~/dist/js/components/ui/Box.jsx"></script>
         </environment>
         <environment names="Staging,Production">
             @*<script src="//ajax.aspnetcdn.com/ajax/jquery/jquery-2.1.4.min.js"
