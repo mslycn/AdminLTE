@@ -10,16 +10,14 @@
         <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.css" />
         <link rel="stylesheet" href="~/lib/ionicons/css/ionicons.css" />
         <link rel="stylesheet" href="~/dist/css/AdminLTE.css" />
-        <link rel="stylesheet" href="~/dist/css/skins/_all-skins.min.css">
+        <link rel="stylesheet" href="~/dist/css/skins/_all-skins.css">
     </environment>
     <environment names="Staging,Production">
-        @*<link rel="stylesheet" href="//ajax.aspnetcdn.com/ajax/bootstrap/3.0.0/css/bootstrap.min.css"
-              asp-fallback-href="~/lib/bootstrap/css/bootstrap.min.css"
-              asp-fallback-test-class="hidden" asp-fallback-test-property="visibility" asp-fallback-test-value="hidden" />
-        <link rel="stylesheet" href="//ajax.aspnetcdn.com/ajax/bootstrap-touch-carousel/0.8.0/css/bootstrap-touch-carousel.css"
-              asp-fallback-href="~/lib/bootstrap-touch-carousel/css/bootstrap-touch-carousel.css"
-              asp-fallback-test-class="carousel-caption" asp-fallback-test-property="display" asp-fallback-test-value="none" />
-        <link rel="stylesheet" href="~/css/site.css" asp-file-version="true" />*@
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="~/lib/ionicons/css/ionicons.min.css" />
+        <link rel="stylesheet" href="~/dist/css/AdminLTE.min.css" />
+        <link rel="stylesheet" href="~/dist/css/skins/_all-skins.min.css">
     </environment>
     <script type="text/jsx" src="@Url.Content("~/dist/js/components/ui/Box.jsx")"></script>
 </head>
@@ -533,23 +531,15 @@
             <script src="~/dist/js/demo.js"></script>
         </environment>
         <environment names="Staging,Production">
-            @*<script src="//ajax.aspnetcdn.com/ajax/jquery/jquery-2.1.4.min.js"
-                    asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-                    asp-fallback-test="window.jQuery">
-            </script>
-            <script src="//ajax.aspnetcdn.com/ajax/bootstrap/3.0.0/bootstrap.min.js"
-                    asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
-                    asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal">
-            </script>
-            <script src="//ajax.aspnetcdn.com/ajax/hammer.js/2.0.4/hammer.min.js"
-                    asp-fallback-src="~/lib/hammer.js/hammer.js"
-                    asp-fallback-test="window.Hammer">
-            </script>
-            <script src="//ajax.aspnetcdn.com/ajax/bootstrap-touch-carousel/0.8.0/js/bootstrap-touch-carousel.js"
-                    asp-fallback-src="~/lib/bootstrap-touch-carousel/dist/js/bootstrap-touch-carousel.js"
-                    asp-fallback-test="window.Hammer && window.Hammer.Instance">
-            </script>
-            <script src="~/js/site.js" asp-file-version="true"></script>*@
+            <script src="~/lib/jquery/dist/jquery.js"></script>
+            <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+            <script src="~/lib/slimScroll/jquery.slimscroll.min.js"></script>
+            <script src="~/lib/fastclick/fastclick.min.js"></script>
+            <script src="~/lib/react/react.js"></script>
+            <script src="~/lib/react/JSXTransformer.js"></script>
+            <script src="~/lib/react-router/build/umd/reactrouter.js"></script>
+            <script src="~/dist/js/app.min.js"></script>
+            <script src="~/dist/js/demo.js"></script>
         </environment>
 
         @RenderSection("scripts", required: false)
