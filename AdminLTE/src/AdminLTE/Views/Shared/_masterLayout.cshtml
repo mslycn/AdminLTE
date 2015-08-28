@@ -22,13 +22,15 @@
     <script type="text/jsx" src="@Url.Content("~/dist/js/components/ui/Box.jsx")"></script>
     <script type="text/jsx" src="@Url.Content("~/dist/js/components/ui/PageHeader.jsx")"></script>
     <script type="text/jsx" src="@Url.Content("~/dist/js/components/ui/Breadcrumb.jsx")"></script>
+    <script type="text/jsx" src="@Url.Content("~/dist/js/components/mainsidebar/MainSidebar.jsx")"></script>
+    <script type="text/jsx" src="@Url.Content("~/dist/js/components/controlsidebar/ControlSidebar.jsx")"></script>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
     <!-- Site wrapper -->
     <div class="wrapper">
         <header class="main-header">
             <!-- Logo -->
-            <a href="../../index2.html" class="logo">
+            <a href="#" class="logo">
                 <!-- mini logo for sidebar mini 50x50 pixels -->
                 <span class="logo-mini"><b>A</b>LT</span>
                 <!-- logo for regular state and mobile devices -->
@@ -175,7 +177,11 @@
         </header>
         <!-- =============================================== -->
         <!-- Left side column. contains the sidebar -->
-        <aside class="main-sidebar">
+        <div id="main-sidebar"></div>
+        <script type="text/jsx">
+            React.render(<MainSidebar />, document.getElementById('main-sidebar'));
+        </script>
+        @*<aside class="main-sidebar">
             <!-- sidebar: style can be found in sidebar.less -->
             <section class="sidebar">
                 <!-- Sidebar user panel -->
@@ -336,7 +342,7 @@
                 </ul>
             </section>
             <!-- /.sidebar -->
-        </aside>
+        </aside>*@
         <!-- =============================================== -->
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
@@ -354,7 +360,7 @@
             <div class="pull-right hidden-xs">
                 <b>Version</b> 2.3.0
             </div>
-            <strong>Copyright &copy; 2014-2015 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights reserved.
+            <strong>Copyright &copy; 2015-2016 <a href="#">X-Studio</a>.</strong> All rights reserved.
         </footer>
         <!-- Control Sidebar -->
         <aside class="control-sidebar control-sidebar-dark">
@@ -490,7 +496,7 @@
                         <h3 class="control-sidebar-heading">Chat Settings</h3>
                         <div class="form-group">
                             <label class="control-sidebar-subheading">
-                                Show me as on-line
+                                Show me as online
                                 <input type="checkbox" class="pull-right" checked>
                             </label>
                         </div><!-- /.form-group -->
@@ -511,28 +517,28 @@
             </div>
         </aside><!-- /.control-sidebar -->
         <!-- Add the sidebar's background. This div must be placed
-             immediately after the control sidebar -->
+         immediately after the control sidebar -->
         <div class="control-sidebar-bg"></div>
     </div><!-- ./wrapper -->
+
         <environment names="Development">
             <script src="~/lib/jquery/dist/jquery.js"></script>
             <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-            <script src="~/lib/slimScroll/jquery.slimscroll.min.js"></script>
-            <script src="~/lib/fastclick/fastclick.min.js"></script>
+            <script src="~/lib/jquery-slimscroll/jquery.slimscroll.js"></script>
+            <script src="~/lib/fastclick/lib/fastclick.js"></script>
             <script src="~/lib/react/react.js"></script>
             <script src="~/lib/react/JSXTransformer.js"></script>
             <script src="~/lib/react-router/build/umd/reactrouter.js"></script>
-            <script src="~/dist/js/app.min.js"></script>
+            <script src="~/dist/js/app.js"></script>
             <script src="~/dist/js/demo.js"></script>
         </environment>
         <environment names="Staging,Production">
-            <script src="~/lib/jquery/dist/jquery.js"></script>
-            <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-            <script src="~/lib/slimScroll/jquery.slimscroll.min.js"></script>
-            <script src="~/lib/fastclick/fastclick.min.js"></script>
-            <script src="~/lib/react/react.js"></script>
+            <script src="~/lib/jquery/dist/jquery.min.js"></script>
+            <script src="~/lib/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+            <script src="~/lib/fastclick/lib/fastclick-min.js"></script>
+            <script src="~/lib/react/react.min.js"></script>
             <script src="~/lib/react/JSXTransformer.js"></script>
-            <script src="~/lib/react-router/build/umd/reactrouter.js"></script>
+            <script src="~/lib/react-router/build/umd/ReactRouter.min.js"></script>
             <script src="~/dist/js/app.min.js"></script>
             <script src="~/dist/js/demo.js"></script>
         </environment>
