@@ -31,5 +31,12 @@ namespace AdminLTE.Controllers
         {
             return View("~/Views/Shared/Error.cshtml");
         }
+
+        public int GetInfo()
+        {
+            Random rnd = new Random();
+            int x = rnd.Next(1, 13);
+            return x;
+        }
     }
 }

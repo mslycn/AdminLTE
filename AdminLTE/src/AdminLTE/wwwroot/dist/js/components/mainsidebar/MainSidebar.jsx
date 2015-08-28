@@ -15,6 +15,25 @@
 });
 
 var NavItem = React.createClass({
+    getInitialState: function () {
+        return { info: {} };
+    },
+    componentDidMount: function () {
+        var sec = this.props.interval;
+        var url = this.props.dataurl;
+        var self = this;
+        if (url != undefined) {
+            setInterval(function () {
+                $.ajax({
+                    url: url,
+                    dataType: 'json',
+                    success: function (data) {
+                        self.setState({ info: data });
+                    }.bind(this)
+                });
+            }, 5000);
+        }
+    },
     displayName: 'NavItem',
     render: function () {
         var icon = "fa fa-" + this.props.icon + " text-" + this.props.iconcolor;
@@ -23,10 +42,10 @@ var NavItem = React.createClass({
                 <li>
                     <a href={this.props.route}>
                         <i className={icon}></i> <span>{this.props.title}</span>
-                        <small className={datacolor}>x</small>
+                        <small className={datacolor}>{this.state.info}</small>
                     </a>
                 </li>
-        );
+               );
     }
 });
 var NavGroup = React.createClass({
@@ -43,31 +62,6 @@ var NavGroup = React.createClass({
 			            {this.props.children}
 			        </ul>
 		        </li>
-                /*
-                                        <li className="treeview">
-                                            <a href="#">
-                                                <i className="fa fa-share"></i> <span>Multilevel</span>
-                                                <i className="fa fa-angle-left pull-right"></i>
-                                            </a>
-                                            <ul className="treeview-menu">
-                                                <li><a href="#"><i className="fa fa-circle-o"></i> Level One</a></li>
-                                                <li>
-                                                    <a href="#"><i className="fa fa-circle-o"></i> Level One <i className="fa fa-angle-left pull-right"></i></a>
-                                                    <ul className="treeview-menu">
-                                                        <li><a href="#"><i className="fa fa-circle-o"></i> Level Two</a></li>
-                                                        <li>
-                                                            <a href="#"><i className="fa fa-circle-o"></i> Level Two <i className="fa fa-angle-left pull-right"></i></a>
-                                                            <ul className="treeview-menu">
-                                                                <li><a href="#"><i className="fa fa-circle-o"></i> Level Three</a></li>
-                                                                <li><a href="#"><i className="fa fa-circle-o"></i> Level Three</a></li>
-                                                            </ul>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="#"><i className="fa fa-circle-o"></i> Level One</a></li>
-                                            </ul>
-                                        </li>
-                */
                 );
     }
 });
@@ -96,7 +90,7 @@ var MainSidebar = React.createClass({
                                             <NavItem title="Dashboard v1" icon="circle-o" route="#" datacolor="red" />
                                             <NavItem title="Dashboard v2" icon="circle-o" route="#" datacolor="green" />
                                         </NavGroup>
-                                        <NavItem title="Widgets" icon="th" iconcolor="red" route="#" datacolor="green" />
+                                        <NavItem title="Widgets" icon="th" iconcolor="red" route="#" dataurl="/Home/GetInfo" datacolor="green" interval="5000" />
                                     </ul>
                                 </section>
                 </aside>
