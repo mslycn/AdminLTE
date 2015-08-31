@@ -87,7 +87,7 @@ var MainSidebar = React.createClass({
                                     <ul className="sidebar-menu">
                                         <li className="header">MAIN NAVIGATION</li>
                                         <NavGroup title=" Dashboard" icon="dashboard">
-                                            <NavItem title="Dashboard v1" icon="circle-o" route="#" datacolor="red" />
+                                            <NavItem title="Dashboard v1" icon="circle-o" route="/Home/Index" datacolor="red" />
                                             <NavItem title="Dashboard v2" icon="circle-o" route="#" datacolor="green" />
                                         </NavGroup>
                                         <NavItem title="Widgets" icon="th" iconcolor="red" route="/Widgets/Index" dataurl="/Home/GetInfo" datacolor="green" interval="5000" />

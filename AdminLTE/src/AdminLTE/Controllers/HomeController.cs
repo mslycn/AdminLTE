@@ -35,7 +35,7 @@ namespace AdminLTE.Controllers
         public int GetInfo()
         {
             Random rnd = new Random();
-            int x = rnd.Next(1, 13);
+            int x = rnd.Next(0, 100);
             return x;
         }
     }
