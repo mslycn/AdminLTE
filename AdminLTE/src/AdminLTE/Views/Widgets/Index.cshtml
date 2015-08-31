@@ -1,0 +1,67 @@
+﻿@{
+    Layout = "~/Views/Shared/_masterLayout.cshtml";
+    ViewBag.Title = "Widgets";
+    ViewBag.Description = "it all starts here";
+}
+<div id="widgets"></div>
+<script type="text/jsx">
+    React.render(
+            <div>
+                <div className="row">
+                    <div className="col-md-3 col-sm-6 col-xs-12">
+                        <InfoBox title="Messages" icon="envelope-o" iconcolor="aqua" dataurl="/Home/GetInfo" />
+                    </div>
+                    <div className="col-md-3 col-sm-6 col-xs-12">
+                        <InfoBox title="Bookmarks" icon="flag-o" iconcolor="aqua" dataurl="/Home/GetInfo" />
+                    </div>
+                    <div className="col-md-3 col-sm-6 col-xs-12">
+                        <InfoBox title="Uploads" icon="files-o" iconcolor="yellow" dataurl="/Home/GetInfo" />
+                    </div>
+                    <div className="col-md-3 col-sm-6 col-xs-12">
+                        <InfoBox title="Likes" icon="star-o" iconcolor="red" dataurl="/Home/GetInfo" />
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-md-3 col-sm-6 col-xs-12">
+                        <InfoBox title="Bookmarks" icon="bookmark-o" boxcolor="bg-aqua" dataurl="/Home/GetInfo">
+                            <div className="progress">
+                                <div className="progress-bar" style={{width: 70}}></div>
+                            </div>
+                            <span className="progress-description">
+                                70% Increase in 30 Days
+                            </span>
+                        </InfoBox>
+                    </div>
+                    <div className="col-md-3 col-sm-6 col-xs-12">
+                        <InfoBox title="Likes" icon="thumbs-o-up" boxcolor="bg-green" dataurl="/Home/GetInfo">
+                            <div className="progress">
+                                <div className="progress-bar" style={{width: 20}}></div>
+                            </div>
+                            <span className="progress-description">
+                                20% Increase in 30 Days
+                            </span>
+                        </InfoBox>
+                    </div>
+                    <div className="col-md-3 col-sm-6 col-xs-12">
+                        <InfoBox title="Events" icon="calendar" boxcolor="bg-yellow" dataurl="/Home/GetInfo">
+                            <div className="progress">
+                                <div className="progress-bar" style={{width: 90}}></div>
+                            </div>
+                            <span className="progress-description">
+                                90% Increase in 30 Days
+                            </span>
+                        </InfoBox>
+                    </div>
+                    <div className="col-md-3 col-sm-6 col-xs-12">
+                        <InfoBox title="Comments" icon="comments-o" boxcolor="bg-red" dataurl="/Home/GetInfo">
+                            <div className="progress">
+                                <div className="progress-bar" style={{width: 40}}></div>
+                            </div>
+                            <span className="progress-description">
+                                40% Increase in 30 Days
+                            </span>
+                        </InfoBox>
+                    </div>
+                </div>
+            </div>, document.getElementById('widgets'));
+</script>
